@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-width:100vw;
+            height:100vh;
+            background-image: url(bg.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            overflow:scroll;
+            padding-left: 120px;
+            padding-right:120px;
+        }
+        .boxes{
+            display:grid;
+            grid-template-columns: 167px 84px 250px 167px 84px 84px 167px;
+            grid-template-rows: 167px 167px 167px;
+        }
+        .box{
+            background-color: blue;
+            margin:5px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+        }
+        .box1{
+            grid-area: 1/1/2/3;
+            background: #0052D4; 
+            background: -webkit-linear-gradient(to left, #6FB1FC, #4364F7, #0052D4); 
+            background: linear-gradient(to left, #6FB1FC, #4364F7, #0052D4); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border:1.5px solid #0052D4; 
+        }
+        .box2{
+            grid-area: 1/3/2/6;
+            background: #FF8008;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            border:1.5px solid  #FFC837; 
+        }
+        .box3{
+            grid-area: 1/6/2/8;
+            background: #0052D4; 
+            background: -webkit-linear-gradient(to left, #6FB1FC, #4364F7, #0052D4); 
+            background: linear-gradient(to left, #6FB1FC, #4364F7, #0052D4); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border:1.5px solid #0052D4; 
+        }
+        .box4{
+            grid-area: 2/1/3/4;
+            background-color: #ff7b00f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top:5px;
+            border:1.5px solid  #ff7b00f9;
+        }
+        .box5{
+            grid-area: 2/4/3/8;
+            background-color: #5bcaf6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding-top:5px;
+            border:1.5px solid #5bcaf6;
+            padding-bottom: 3px;
+        }
+        .box6{
+            grid-area: 3/1/4/2;
+            background: #4b6cb7;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border:1.5px solid  #182848;
+        }
+        .box7{
+            grid-area: 3/2/4/5;
+            background: #D38312;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding:15px;
+            border:1.5px solid #D38312;
+        }
+        .box8{
+            grid-area: 3/5/4/7;
+            background: #C33764;  
+            background: -webkit-linear-gradient(to right, #1D2671, #C33764); 
+            background: linear-gradient(to right, #1D2671, #C33764); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border:1.5px solid #C33764;  
+        }
+        .box9{
+            grid-area: 3/7/4/8;
+            background: #C33764;  
+            background: -webkit-linear-gradient(to right, #1D2671, #C33764); 
+            background: linear-gradient(to right, #1D2671, #C33764); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border:1.5px solid #C33764;  
+        }
+        .icon{
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+        p{
+            font-size: 13px;
+        }
+        .line{
+            font-size: 17px;
+            margin-top: 8px;
+            text-align: center;
+        }
+        .b2{
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .cap{
+            background-color: white;
+            color: rgb(255, 140, 0);
+            font-size: 15px;
+            width:90px;
+            padding:3.5px;
+            margin-left: 5px;
+        }
+        .b4{
+            justify-content: left;
+        }
+        .play{
+            background-color: white;
+            color:#81bcff;
+            font-size: 15px;
+            width:70px;
+            padding:3.5px;
+            margin-left: 5px;
+        }
+        .head{
+            width:1000px;
+            display: flex;
+            justify-content: left;
+            margin-bottom: 5px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: white;" class="head">2024 in numbers</h2>
+        <div class="boxes">
+            <div class="box box1">
+                <h1>1260</h1>
+                <p>Sixes</p>
+            </div>
+            <div class="box box2">
+                <h4 style="font-size: 17px;" class="b2">Winners</h4>
+                <h3 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">CHENNAI SUPER KINGS</h3>
+                <img src="csk.png" alt="" height="100px" width="130px" >
+            </div>
+            <div class="box box3">
+                <h1>14</h1>
+                <p>Hundreds</p>
+            </div>
+            <div class="box box4">
+                <img src="virat.png" height="155px" width="150px" alt="">
+                <div class="b4">
+                    <div class="cap">
+                        <p style="text-align: center;"><i class="fa-solid fa-graduation-cap"></i>Orange Cap</p>
+                    </div>
+                    <h2 style="margin-left: 5px;">Virat Kohli</h2>
+                    <table cellspacing="10px">
+                        <tr>
+                            <td>Total Runs</td>
+                            <td>741</td>
+                        </tr>
+                        <tr>
+                            <td>Strike Rate</td>
+                            <td>154.7</td>
+                        </tr>
+                        <tr>
+                            <td>Matches Played</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box box5">
+                <img src="cummin.png" height="155px" width="150px" alt="">
+                <div class="b4">
+                    <div class="play">
+                        <p style="text-align: center;">Fairplay</p>
+                    </div>
+                    <h2 style="margin-left: 5px;">Sunrisers Hyderabad</h2>
+                    <table cellspacing="10px">
+                        <tr>
+                            <td>Points</td>
+                            <td>173</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box box6">
+                <i class="fa-regular fa-image icon"></i>
+                <p>Pics</p>
+            </div>
+            <div class="box box7">
+                <h2>Interesting Facts</h2>
+                <p class="line">"Kolkata Knight Riders crowned champions for the third time, having previously won in 2012,2014"</p>
+            </div>
+            <div class="box box8">
+                <i class="fa-solid fa-chart-line icon"></i>
+                <p>Match Reports</p>
+            </div>
+            <div class="box box9">
+                <i class="fa-regular fa-circle-play icon"></i>
+                <p>Highlights</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
